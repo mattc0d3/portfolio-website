@@ -17,8 +17,9 @@ function pageTransitions() {
     allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id
         if (id) {
+            console.log(sectBtn)
             // remove selected from other buttons
-            sectBtns.forEach(btn => {
+            sectBtn.forEach(btn => {
                 btn.classList.remove('active')
             })
             e.target.classList.add('active')
@@ -31,6 +32,13 @@ function pageTransitions() {
             const element = document.getElementById(id)
             element.classList.add('active')
         }
+    })
+
+    // Toggle theme
+    const themeBtn = document.querySelector('.theme-btn')
+    themeBtn.addEventListener('click', () => {
+        let element = document.body
+        element.classList.toggle('light-mode')
     })
 }
 
