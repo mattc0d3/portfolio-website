@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -177,7 +179,7 @@ section {
 .header-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
+    min-height: 100%;
 
     .left-header {
         display: flex;
@@ -222,7 +224,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 18rem;
+        padding-right: 0 !important;
 
         .name {
             font-size: 3rem;
@@ -298,7 +300,11 @@ section {
         }
     }
 
-    .left-about {}
+    .left-about {
+        p {
+            margin: 5rem 0;
+        }
+    }
 }
 
 // Portfolio
@@ -568,17 +574,7 @@ section {
         span {
             color: var(--colour-secondary);
         }
-
-        .bg-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: var(--colour-grey5);
-            transition: var(--transition);
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            font-weight: 800;
-            font-size: 6.3rem;
-        }
     }
 }
+
+@import './media';
