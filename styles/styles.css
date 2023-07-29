@@ -642,6 +642,9 @@ section {
   .main-title h2 .bg-text {
     font-size: 2.5rem;
   }
+  .right-about {
+    margin-bottom: 4rem;
+  }
   .contact-container {
     padding-bottom: 4rem;
   }
