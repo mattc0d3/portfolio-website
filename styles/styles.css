@@ -63,7 +63,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 14rem;
 }
 
 .section {
@@ -94,7 +94,7 @@ section {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
+  animation: scaleAnim 0.8s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
@@ -211,7 +211,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 0 !important;
+  padding-right: 16rem;
 }
 .header-content .right-header .name {
   font-size: 3rem;
@@ -224,16 +224,21 @@ section {
   line-height: 2rem;
 }
 
+.about {
+  max-height: 100vh;
+}
+
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 .about-container .right-about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  align-items: center;
 }
 .about-container .right-about .about-item {
   border: 1px solid var(--colour-grey5);
@@ -248,22 +253,11 @@ section {
   box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
 .about-container .right-about .about-item .about-text {
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
-.about-container .right-about .about-item .about-text .large-text {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--colour-secondary);
-}
-.about-container .right-about .about-item .about-text .small-text {
-  padding-left: 3rem;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  color: var(--colour-grey1);
-  letter-spacing: 2px;
+.about-container .right-about .about-item .about-text .img {
+  height: 50px;
 }
 .about-container .right-about .about-item .about-text .small-text::before {
   content: "";
@@ -274,6 +268,15 @@ section {
   height: 2px;
   background-color: var(--colour-grey5);
 }
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--colour-grey1);
+}
+
 .portfolio-text {
   padding: 2rem 0;
   text-align: center;
@@ -395,8 +398,8 @@ section {
   background-color: var(--colour-grey5);
   cursor: pointer;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   margin: 0 0.4rem;
   transition: var(--transition);
@@ -411,7 +414,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 .contact-content-container .right-contact {
   flex: 3;
@@ -505,9 +508,87 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: 1fr !important;
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .section {
+    padding: 2rem 2.5rem !important;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1432px) {
+  header {
+    padding: 0 !important;
+  }
+  .section {
+    padding: 7rem 11rem;
+  }
+  .contact-content-container {
+    flex-direction: column;
+  }
+  .contact-content-container .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-container .right-contact .i-c-2 {
+    flex-direction: column;
+  }
+  .contact-content-container .right-contact .i-c-2 :last-child {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .right-header {
+    padding-right: 8rem !important;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .main-title h2 {
+    font-size: 4rem;
+  }
+  .main-title h2 span {
+    font-size: 4rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  .section {
+    padding: 7rem;
+  }
   header {
     padding: 0;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
   }
   header .right-header {
     padding: 2rem !important;
@@ -535,35 +616,6 @@ section {
     margin: 0 auto;
     width: 90%;
   }
-  .about-container {
-    grid-template-columns: 1fr !important;
-  }
-  .about-container .right-about {
-    grid-template-columns: 1fr;
-    padding-top: 2.5rem;
-  }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-left: 0;
-  }
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .section {
-    padding: 2rem 2.5rem !important;
-  }
-  .main-title h2 {
-    font-size: 2rem;
-  }
-  .main-title h2 span {
-    font-size: 2.5rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 2.5rem;
-  }
   .controls {
     top: auto;
     bottom: 0;
@@ -578,58 +630,16 @@ section {
     margin: 0.6rem 1rem;
   }
 }
-@media screen and (max-width: 1432px) {
-  header {
-    padding: 0 !important;
-  }
-  .section {
-    padding: 7rem 11rem;
-  }
-  .contact-content-container {
-    flex-direction: column;
-  }
-  .contact-content-container .right-contact {
-    margin-left: 0;
-    margin-top: 2.5rem;
-  }
-  .contact-content-container .right-contact .i-c-2 {
-    flex-direction: column;
-  }
-  .contact-content-container .right-contact .i-c-2 :last-child {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-}
-@media screen and (max-width: 1070px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .about-container .right-about {
-    padding-top: 2.5rem;
-  }
-  .portfolio-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .main-title h2 {
-    font-size: 4rem;
-  }
-  .main-title h2 span {
-    font-size: 4rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
-  }
-}
-@media screen and (max-width: 970px) {
-  .section {
-    padding: 7rem;
-  }
-}
 @media screen and (max-width: 700px) {
   .section {
     padding: 7rem 3rem;
   }
   .main-title h2 {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=styles.css.map */

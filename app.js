@@ -20,9 +20,9 @@ function pageTransitions() {
             console.log(sectBtn)
             // remove selected from other buttons
             sectBtn.forEach(btn => {
-                btn.classList.remove('active')
+                btn.classList.remove('active-btn')
             })
-            e.target.classList.add('active')
+            e.target.classList.add('active-btn')
 
             // hide other sections
             sections.forEach(section => {

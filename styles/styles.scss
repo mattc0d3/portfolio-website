@@ -65,7 +65,7 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 14rem;
 }
 
 .section {
@@ -96,7 +96,7 @@ section {
 
 .active {
     display: block;
-    animation: scaleAnim 1s ease-in-out;
+    animation: scaleAnim 0.8s ease-in-out;
 
     @keyframes scaleAnim {
         0% {
@@ -120,6 +120,7 @@ section {
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
+    // animation: none !important;
 
     .active-btn {
         background-color: var(--colour-secondary) !important;
@@ -224,7 +225,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 0 !important;
+        padding-right: 16rem;
 
         .name {
             font-size: 3rem;
@@ -243,16 +244,22 @@ section {
 }
 
 // About
+.about {
+    max-height: 100vh;
+}
+
 .about-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     padding-top: 3.5rem;
     padding-bottom: 5rem;
 
     .right-about {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        // grid-template-rows: repeat(4, 1fr);
         grid-gap: 2rem;
+        align-items: center;
 
         .about-item {
             border: 1px solid var(--colour-grey5);
@@ -268,23 +275,13 @@ section {
             }
 
             .about-text {
-                padding: 1.5rem;
                 display: flex;
                 flex-direction: column;
 
-                .large-text {
-                    font-size: 3rem;
-                    font-weight: 700;
-                    color: var(--colour-secondary)
+                .img {
+                    height: 50px;
                 }
-
                 .small-text {
-                    padding-left: 3rem;
-                    position: relative;
-                    text-transform: uppercase;
-                    font-size: 1.2rem;
-                    color: var(--colour-grey1);
-                    letter-spacing: 2px;
 
                     &::before {
                         content: '';
@@ -301,8 +298,11 @@ section {
     }
 
     .left-about {
+        padding-right: 5rem;
         p {
-            margin: 5rem 0;
+            line-height: 2rem;
+            padding: 1rem;
+            color: var(--colour-grey1)
         }
     }
 }
@@ -445,8 +445,8 @@ section {
                     background-color: var(--colour-grey5);
                     cursor: pointer;
                     justify-content: center;
-                    width: 50px;
-                    height: 50px;
+                    width: 75px;
+                    height: 75px;
                     border-radius: 50%;
                     margin: 0 .4rem;
                     transition: var(--transition);
@@ -463,7 +463,7 @@ section {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 1.3rem;
+                        font-size: 2rem;
                     }
                 }
             }
