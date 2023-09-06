@@ -58,11 +58,4 @@ function revealDescription(icon, description) {
     icon.addEventListener("mouseleave", () => {
         description.style.display = "none"
     })
-    icon.addEventListener("click", () => {
-        if (description.style.display === "none") {
-            description.style.display = "block"
-        } else {
-            description.style.display = "none"
-        }
-    })
 }
