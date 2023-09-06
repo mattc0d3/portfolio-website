@@ -43,3 +43,26 @@ function pageTransitions() {
 }
 
 pageTransitions()
+
+const portfolioIcons = document.querySelectorAll(".portfolio-item")
+const portfolioDescriptions = document.querySelectorAll(".portfolio-description")
+
+for (let i = 0; i < portfolioIcons.length; i++) {
+    revealDescription(portfolioIcons[i], portfolioDescriptions[i])
+}
+
+function revealDescription(icon, description) {
+    icon.addEventListener("mouseover", () => {
+        description.style.display = "block"
+    })
+    icon.addEventListener("mouseleave", () => {
+        description.style.display = "none"
+    })
+    icon.addEventListener("click", () => {
+        if (description.style.display === "none") {
+            description.style.display = "block"
+        } else {
+            description.style.display = "none"
+        }
+    })
+}

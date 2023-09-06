@@ -318,6 +318,15 @@ section {
     grid-gap: 2rem;
     margin-top: 3rem;
 
+    .portfolio-description {
+        display: none;
+        grid-column: span 3;
+        p {
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+    }
+
     .portfolio-item {
         position: relative;
 
@@ -391,6 +400,7 @@ section {
     transform: scale(1);
 }
 
+// Contact
 .contact-content-container {
     display: flex;
     padding-top: 3.5rem;

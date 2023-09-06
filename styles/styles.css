@@ -287,6 +287,14 @@ section {
   grid-gap: 2rem;
   margin-top: 3rem;
 }
+.portfolio-grid .portfolio-description {
+  display: none;
+  grid-column: span 3;
+}
+.portfolio-grid .portfolio-description p {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
 .portfolio-grid .portfolio-item {
   position: relative;
 }
